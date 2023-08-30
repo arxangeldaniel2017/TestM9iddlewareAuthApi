@@ -35,6 +35,7 @@ app.UseAuthentication();
 app.MapControllers();
 
 // daniel
+app.UseMiddleware<PermissionsMiddleware>();
 app.UseMiddleware<BaseGisProxyMiddleware>();
 
 app.Run();

@@ -24,7 +24,6 @@ namespace TestM9iddlewareAuthApi.Middleware
             _nextMiddleware = nextMiddleware;
         }
 
-        [Authorize]
         public async Task Invoke(HttpContext context, IGisApiHelper GisApiHelper, IHostEnvironment env, IAppSettings appSettings)
         {
             if (!context.User.Identity.IsAuthenticated)
