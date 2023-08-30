@@ -26,11 +26,6 @@ namespace TestM9iddlewareAuthApi.Middleware
 
         public async Task Invoke(HttpContext context, IGisApiHelper GisApiHelper, IHostEnvironment env, IAppSettings appSettings)
         {
-            if (!context.User.Identity.IsAuthenticated)
-            {
-                var aa = 1;
-            }
-
             this.GisApiHelper = GisApiHelper;
             this.AppStettings = appSettings;
             this.env = env;
